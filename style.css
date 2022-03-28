@@ -155,15 +155,15 @@ header.active {
   font-size: 1.8rem;
   color: var(--White);
   font-weight: bold;
-  height: 100vh;
-  width: 100vw;
+  height: 0vh;
+  width: 0vw;
   background: var(--main);
   position: absolute;
   left: 0;
   top: 0;
   transform: translateX(100%);
   transition: all 1s ease-in-out;
-  display: none;
+  /* display: none; */
 
 }
 
@@ -171,6 +171,8 @@ header.active {
   transform: translateX(0);
   transition: all 1s ease-in-out;
   display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
 .burger {
