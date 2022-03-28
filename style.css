@@ -10,6 +10,8 @@
 body {
   font-size: 10px;
   overflow-x: hidden !important;
+  overflow-y: hidden !important;
+
 }
 
 :root {
@@ -17,9 +19,9 @@ body {
   --White: #fff;
   --DarkWhiteBcg: #fafafa;
   --main: linear-gradient(to left bottom,
-      #F39820,
-      #f0ad49,
-      #e49928,
+      #f37f20,
+      #f0a849,
+      #e9981f,
       #df993f,
       #e49144,
       #d68e30,
@@ -43,18 +45,18 @@ body {
 
   /* Colors Hover */
   --mainHover: linear-gradient(to left bottom,
-      #9e8fdc,
-      #9c8cdd,
-      #9989dd,
-      #9785de,
-      #9482de,
-      #977fdb,
-      #9a7cd8,
-      #9d79d5,
-      #a576ce,
-      #ab74c7,
-      #b172c0,
-      #b570b9);
+      #dc8f8f,
+      #dd8c8c,
+      #dd8989,
+      #de8585,
+      #de8282,
+      #db7f7f,
+      #d87c7c,
+      #d57979,
+      #ce7676,
+      #c77474,
+      #c07272,
+      #b97070);
   --secondaryHover: linear-gradient(to right bottom,
       rgba(252, 132, 34, 0.824),
       rgba(255, 136, 0, 0.796),
@@ -160,11 +162,15 @@ header.active {
   left: 0;
   top: 0;
   transform: translateX(100%);
-  transition: all 0.3s ease-in-out;
+  transition: all 1s ease-in-out;
+  display: none;
+
 }
 
 .menu.active {
   transform: translateX(0);
+  transition: all 1s ease-in-out;
+  display: flex;
 }
 
 .burger {
@@ -307,18 +313,6 @@ header.active {
   gap: 1rem;
 }
 
-.scroll-down-button {
-  width: 1.5rem;
-  height: 5rem;
-  margin: 2rem auto;
-  display: block;
-  border-radius: 1rem;
-  border: 0.2rem solid #7d62f2;
-  background: none;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
 
 .scroll-down-circle {
   height: 1rem;
