@@ -201,7 +201,9 @@
   </div>
   <section class="contact">
     <img src="./images/message_sentl.svg" alt="mail-image" />
-    <form class="contact-form">
+    <form class="contact-form" action="https://formsubmit.io/send/put your unique code here" method="POST">
+      <input name="_redirect" type="hidden" id="name" value="#">
+
       <div class="contact-form-field">
         <label for="name">Name</label>
         <input type="text" name="name" required />
@@ -211,10 +213,11 @@
         <input type="text" name="email" required />
       </div>
       <div class="contact-form-field">
-        <label for="message">Name</label>
+        <label for="message">Text</label>
         <textarea name="message" cols="30" rows="8"></textarea>
       </div>
       <button class="contact-form-btn">Submit</button>
+      <input name="_formsubmit_id" type="text" style="display:none">
     </form>
   </section>
   <footer>Copyright &copy; 2022 Damian Pasterz. All rights reserved.</footer>
