@@ -618,9 +618,9 @@ header.active {
   }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (max-width: 500px) {
   .technologies-item {
-    margin: .5rem;
+    margin: .5rem auto;
   }
 }
 
@@ -735,7 +735,7 @@ footer {
   display: none;
   position: fixed;
   bottom: 4rem;
-  right: 2rem;
+  right: 0.5rem;
   z-index: 99;
   border: none;
   outline: none;
@@ -762,3 +762,19 @@ footer {
   transform: translate(-.55rem, -.55rem);
 
 }
+
+@media only screen and (max-width: 450px) {
+  #myBtn {
+    right: 26rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #myBtn img {
+    display: block;
+
+    transform: translate(-1rem, -1rem);
+  }
+}
+
+@media only screen and (max-width: 450px) {}
