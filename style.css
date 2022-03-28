@@ -620,7 +620,7 @@ header.active {
 
 @media only screen and (max-width: 500px) {
   .technologies-item {
-    margin: .5rem auto;
+    width: 40%;
   }
 }
 
@@ -733,9 +733,9 @@ footer {
   width: 4rem;
   height: 4rem;
   display: none;
-  position: fixed;
+  position: sticky;
   bottom: 4rem;
-  right: 0.5rem;
+  right: 05rem;
   z-index: 99;
   border: none;
   outline: none;
@@ -776,5 +776,3 @@ footer {
     transform: translate(-1rem, -1rem);
   }
 }
-
-@media only screen and (max-width: 450px) {}
