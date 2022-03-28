@@ -725,3 +725,40 @@ footer {
     font-size: 1.1rem;
   }
 }
+
+
+
+#myBtn {
+
+  width: 4rem;
+  height: 4rem;
+  display: none;
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: var(--main);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+
+
+
+
+
+
+}
+
+#myBtn:hover {
+  background: var(--secondary);
+}
+
+#myBtn img {
+  display: block;
+
+  transform: translate(-.55rem, -.55rem);
+
+}
