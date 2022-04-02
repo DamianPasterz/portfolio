@@ -29,7 +29,7 @@ menuLinks.forEach((link) =>
     const section =
       document.querySelector(`.${key}`).getBoundingClientRect().top +
       window.pageYOffset -
-      110;
+      220;
 
     menu.classList.remove('active');
     burgerBtn.classList.remove('active');
@@ -39,20 +39,16 @@ menuLinks.forEach((link) =>
 );
 
 
-mybutton = document.getElementById("myBtn");
 
 
-window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
   } else {
-    mybutton.style.display = "none";
+    toTop.classList.remove("active");
   }
-}
-
-
-function topFunction() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+})

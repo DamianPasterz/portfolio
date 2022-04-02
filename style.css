@@ -81,6 +81,11 @@ body {
     rgba(245, 146, 17, 0.1) 20px 20px, rgba(247, 158, 17, 0.05) 25px 25px;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* SECTION TITLE */
 
 .section-title {
@@ -148,27 +153,34 @@ header.active {
 }
 
 .menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   font-size: 1.8rem;
   color: var(--White);
   font-weight: bold;
-  height: 0vh;
-  width: 0vw;
+  height: 100vh;
+  width: 100vw;
   background: var(--main);
   position: absolute;
   left: 0;
   top: 0;
-  transform: translateX(100%);
-  transition: all 0.35s ease-in-out;
-
+  /* transform: translateX(100%); */
+  /* visibility: hidden ; */
+  transition: all .3s ease-in-out;
 }
 
 .menu.active {
-  transform: translateX(0);
   display: flex;
+  visibility: visible;
+  /* transform: translateX(0); */
+}
+
+@media only screen and (min-width: 1000px) {
+  .menu {
+    display: flex;
+  }
 }
 
 .burger {
@@ -234,7 +246,12 @@ header.active {
   .burger {
     display: none;
   }
-
+  body {
+    font-size: 10px;
+    overflow-x: hidden !important;
+  
+  
+  }
   .menu {
     position: unset;
     background: inherit;
@@ -575,7 +592,7 @@ header.active {
   gap: 1rem;
   padding: 2rem;
   flex-wrap: wrap;
-  margin-bottom: 25rem;
+  margin-bottom: 5rem;
 }
 
 .technologies-item {
@@ -709,7 +726,7 @@ footer {
   font-size: 0.8rem;
   text-align: center;
   padding: 1rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
   background: var(--main);
   color: var(--White);
 }
@@ -722,51 +739,27 @@ footer {
 
 
 
-#myBtn {
-
-  width: 4rem;
-  height: 4rem;
-  display: none;
+.to-top {
+  background: var(--textColor);
   position: fixed;
-  bottom: 4rem;
-  right: 5rem;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background: var(--main);
-  color: white;
-  cursor: pointer;
-  padding: 15px;
+  bottom: 16px;
+  right:32px;
+  width:50px;
+  height:50px;
   border-radius: 50%;
-
-
-
-
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32px;
+  color:#ffffff;
+  text-decoration: none;
+  opacity:0;
+  pointer-events: none;
+  transition: all .4s;
 }
 
-#myBtn:hover {
-  background: var(--secondary);
-}
-
-#myBtn img {
-  display: block;
-
-  transform: translate(-.55rem, -.55rem);
-
-}
-
-@media only screen and (max-width: 450px) {
-  #myBtn {
-    right: 26rem;
-    width: 3rem;
-    height: 3rem;
-  }
-
-  #myBtn img {
-    display: block;
-
-    transform: translate(-1rem, -1rem);
-  }
+.to-top.active {
+  bottom:32px;
+  pointer-events: auto;
+  opacity:1;
 }
