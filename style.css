@@ -163,7 +163,7 @@ header.active {
   height: 100vh;
   width: 100vw;
   background: var(--main);
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   /* transform: translateX(100%); */
@@ -175,6 +175,11 @@ header.active {
   display: flex;
   visibility: visible;
   /* transform: translateX(0); */
+}
+
+.menu.active ~ body{
+  overflow-y: hidden !important;
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -299,6 +304,9 @@ header.active {
 
 .home {
   margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .home-image {
@@ -311,6 +319,7 @@ header.active {
   font-size: 2.3rem;
   text-align: center;
   color: var(--textColor);
+  align-items: center;
 }
 
 .home-content span {
@@ -326,6 +335,33 @@ header.active {
   border-radius: 0.5rem;
   display: flex;
   gap: 1rem;
+}
+
+.home-icons2 a{
+  color: black;
+  background: var(--main);
+  width: max-content;
+  margin: 1rem 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  text-decoration: none;
+  flex-direction: column;
+  
+}
+
+.home-icons2 p {
+  font-size: .8rem;
+  text-align: start;
+  text-shadow: #ce7676;
+}
+
+.home-icons2 h1 {
+  font-size: 1rem;
+  text-align: start;
+  text-shadow: #ce7676;
 }
 
 
@@ -524,6 +560,8 @@ header.active {
   display: block;
   margin: 10rem auto;
 }
+
+
 
 @media only screen and (min-width: 780px) {
   .about {

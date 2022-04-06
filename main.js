@@ -29,7 +29,8 @@ menuLinks.forEach((link) =>
     const section =
       document.querySelector(`.${key}`).getBoundingClientRect().top +
       window.pageYOffset -
-      220;
+      240;
+    console.log(section);
 
     menu.classList.remove('active');
     burgerBtn.classList.remove('active');
@@ -52,3 +53,33 @@ window.addEventListener("scroll", () => {
     toTop.classList.remove("active");
   }
 })
+
+
+const codewarsHolder = document.querySelector('.code_wars')
+const userName = document.querySelector('.userName')
+const honor = document.querySelector('.honor')
+const ranks = document.querySelector('.rank')
+const totalComplet = document.querySelector('.total')
+
+const CODEWARS_URL = "https://www.codewars.com/api/v1/users/MamianD"
+
+
+let codeWarsApi = fetch(CODEWARS_URL)
+  .then((result) => {
+    return result.json();
+  })
+  .then((response) => {
+    // console.log(response);
+    userName.textContent += response.username;
+    honor.textContent += response.honor;
+    ranks.textContent += response.ranks.overall.name;
+    totalComplet.textContent += response.codeChallenges.totalCompleted;
+
+
+  })
+  .catch((err) => {
+    console.error(err);
+    error.textContent = err.message;
+  })
+
+console.log();
