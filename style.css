@@ -7,9 +7,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 10px;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 
 
 }
