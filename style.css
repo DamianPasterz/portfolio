@@ -308,9 +308,7 @@ header.active {
 
 .home {
   margin-top: 5rem;
-  display: flex;
-  align-items: center;
-  justify-items: center;
+  
 }
 
 .home-image {
@@ -343,7 +341,7 @@ header.active {
 
 .home-icons2 a{
   color: black;
-  background: var(--main);
+  /* background: var(--main); */
   width: max-content;
   margin: 1rem 2rem;
   padding: 0.5rem 1rem;
@@ -357,7 +355,7 @@ header.active {
 }
 
 .home-icons2 p {
-  font-size: .8rem;
+  font-size: 1.2rem;
   text-align: start;
   text-shadow: #ce7676;
 }
@@ -805,3 +803,73 @@ footer {
   pointer-events: auto;
   opacity:1;
 }
+
+
+/* modal_window */
+
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background: var(--main);
+  /* width: 500px; */
+  max-width: 80%;
+  font-size: .8rem;
+  text-align: start;
+ 
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
