@@ -337,10 +337,10 @@ cursor: pointer;
   background: var(--main);
   width: max-content;
   margin: 1rem auto;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
   display: flex;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 
 .home-icons2 a{
@@ -351,9 +351,14 @@ cursor: pointer;
   border-radius: 0.5rem;
   display: flex;
   position: relative;
-  gap: 1rem;
+  gap: .5rem;
   text-decoration: none;
   flex-direction: column;
+  font-size: ;
+}
+
+.home-icons a img{
+  width: 80px;
   
 }
 
