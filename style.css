@@ -345,10 +345,10 @@ cursor: pointer;
 }
 
 .home-icons a:hover {
-  width: 80px;
-  height: 80px;
+  /* width: 80px; */
+  /* height: 85px; */
   border-radius: 50%;
-  background-color:orange;
+  /* background-color:orange; */
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -385,7 +385,7 @@ cursor: pointer;
   gap: .5rem;
   text-decoration: none;
   flex-direction: column;
-  font-size: ;
+  
 }
 
 .home-icons a img{
