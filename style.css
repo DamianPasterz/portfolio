@@ -170,15 +170,14 @@ header.active {
   position: fixed;
   left: 0;
   top: 0;
-  /* transform: translateX(100%); */
-  /* visibility: hidden ; */
+ 
   transition: all .3s ease-in-out;
 }
 
 .menu.active {
   display: flex;
   visibility: visible;
-  /* transform: translateX(0); */
+ 
 }
 
 .menu.active ~ body{
@@ -341,6 +340,38 @@ cursor: pointer;
   border-radius: 0.5rem;
   display: flex;
   gap: 2.5rem;
+  transition-property:all;
+  transition-duration: 1s;
+}
+
+.home-icons a:hover {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color:orange;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+
+  
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 .home-icons2 a{
@@ -465,9 +496,20 @@ cursor: pointer;
 }
 
 .project-content-card img {
+  border-radius: 15px;
   width: 70%;
   display: block;
   margin: 0 auto;
+}
+
+.project-content-card a img{
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
+.project-content-card a img:hover {
+  background-color: #9e9d9d;
+ 
 }
 
 .project-info {
@@ -486,9 +528,16 @@ cursor: pointer;
 }
 
 .project-link img {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 2.6rem;
+  height: 2.6rem;
   margin: 0.3rem;
+}
+
+.project-link img:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .project-description {
